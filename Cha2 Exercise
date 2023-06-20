@@ -1,0 +1,54 @@
+package exercise;
+
+import java.util.Scanner;
+public class Basics {
+
+	public static void main(String[] args) {
+		
+		///// make a Scanner instance
+//		Scanner input = new Scanner(System.in);
+//		
+//		System.out.print("Age ?");
+//		int age = input.nextInt();
+//		
+//		System.out.print("Name ?");
+//		String name = input.nextLine();
+//		
+//		input.nextLine(); // Consume newline left-over
+//		
+//		System.out.print("Height ?");
+//		double height = input.nextDouble();
+//		
+//		System.out.println("Hello," + name);
+//		System.out.println("Hello, " + age + "years old!");
+//		System.out.println("Hello, " + height + "cm");
+		
+		
+		////////////////////
+//		double currentTime = System.currentTimeMillis();
+//		System.out.println(currentTime);
+//		////////////////////
+//		System.out.println(System.currentTimeMillis());
+		
+		
+		int i = 1;
+		i++; // i +=1 // i = i+1
+		i--; // i -=1
+	}
+
+}
+
+package exercise;
+
+public class Radical {
+
+	public static void main(String[] args) {
+		
+		int x = 3;
+		
+		double ans = Math.pow(x, 0.5);
+		System.out.println(ans);
+
+	}
+
+}
