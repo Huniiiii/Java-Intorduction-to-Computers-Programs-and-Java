@@ -1,0 +1,643 @@
+package homework;
+
+public class listing51 {
+
+	public static void main(String[] args) {
+		int i = 5;
+		int j = 2;
+		int k = max(i, j);
+		System.out.println("The maximum of " + i + " and " + j + " is " + k);
+		}
+
+	public static int max (int num1, int num2) {
+		int result;
+		if (num1 > num2) {
+			result = num1;
+		}
+		else {
+			result = num2;
+
+		}
+		
+		return result;
+
+	}
+
+
+	}
+	
+
+
+package homework;
+
+public class listing52 {
+	public static void main(String[] args) {
+		System.out.print("The grade is ");
+		printGrade(78.5);
+		
+		System.out.print("The grade is ");
+		printGrade(59.5);
+	}
+	public static void printGrade(double score) {
+		if (score >= 90.0) {
+			System.out.println('A');
+		}
+		else if (score >= 80.0) {
+			System.out.println('B');
+		}
+		else if (score >= 70.0) {
+			System.out.println('C');
+		}
+		else if (score >= 60.0) {
+			System.out.println('D');
+		}
+		else {
+			System.out.println('F');
+		}
+
+		
+	}
+	
+
+}
+
+package homework;
+
+public class listing53 {
+
+	public static void main(String[] args) {
+		System.out.print("The grade is " + getGrade(78.5));
+		System.out.print("\nThe grade is " + getGrade(59.5));
+
+	}
+	
+	public static char getGrade(double score) {
+		if (score >= 90.0)
+			return 'A';
+			else if (score >= 80.0)
+			return 'B';
+			else if (score >= 70.0)
+			return 'C';
+			else if (score >= 60.0)
+			return 'D';
+			else
+			return 'F';
+			}
+	}
+
+
+
+package homework;
+
+public class Q1 {
+
+	public static void main(String[] args) {
+		
+		for (int i =1; i <=100; i++) {
+			System.out.print(getPentagonalNumber(i) + " ");
+			
+			if (i % 10 ==0) {
+				System.out.println("");
+			}
+		}
+
+	}
+
+	public static int getPentagonalNumber(int n) {
+		int number = (n*(3*n-1))/2;
+		return (int) number;
+	}
+}
+
+package homework;
+
+public class Q2 {
+
+	public static void main(String[] args) {
+		System.out.println(sumDigits(234));
+
+	}
+	
+	public static int sumDigits(int number) {
+		int sum = 0;
+		while(number >0) {
+				sum += number % 10;
+				number = number / 10;
+
+		}
+		return sum;
+
+	}
+}
+
+
+
+package homework;
+import java.util.Scanner;
+public class Q3 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		 System.out.print("Enter your number: ");
+		 int number = input.nextInt();
+		 
+		 if (isPalindrome(number)) {
+			   System.out.print(number + " is a palindrome");
+			  } 
+		 else {
+			   System.out.print(number + " is not a palindrome");
+			  }
+
+			 }
+	public static int reverse(int number) {
+		int reverse = 0;
+		int digit;
+		while(number != 0){
+			digit = number % 10;
+			reverse = reverse * 10 + digit;
+			number = number / 10;
+
+		}
+		return reverse;
+		
+		
+	}
+	
+	public static boolean isPalindrome(int number) {
+		return (number == reverse(number));
+	}
+	}
+
+package homework;
+import java.util.Scanner;
+public class Q3new {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter your number: ");
+		int number = input.nextInt();
+		
+		System.out.println("The reverse number is " + reverse(number) + ".");
+		System.out.println("The number is " +isPalindrome(number) +".");
+
+	}
+	
+	public static int reverse(int number) {
+		int reverse = 0;
+		int digit = 0;
+		
+		
+		while(number > 0){
+			digit = number % 10;
+			reverse = reverse* 10 + digit;
+			number = number / 10;
+
+		
+		}
+		
+		return reverse;
+	}
+	
+	public static boolean isPalindrome(int number) {
+		if (number == reverse(number)) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+}
+
+package homework;
+
+import java.util.Scanner;
+public class Q6 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Please enter a integer: ");
+		int n = input.nextInt();
+		
+		for (int i=0; i <=n ; i++) {
+			for (int k= n - (i + 1); k >= 0; k--) {
+				System.out.print("  ");
+			}
+			
+			for (int j = i; j>0 ; j--) {
+				System.out.print(j + " ");
+			}
+			System.out.println();
+		}
+
+	}
+}
+package homework;
+
+public class Q10 {
+
+	public static void main(String[] args) {
+		
+		int countPrime = 0;
+		
+		 for (int i = 0; i < 10000; i++) {
+			 
+		
+			 if (isPrime(i + 1)) {
+				 
+				 System.out.print((i + 1) + " ");
+				 countPrime++;
+			 }
+			 if (countPrime % 10 == 0) {
+				 System.out.println();
+			 }
+		 }
+		 System.out.println("The number of primes is " + countPrime);
+	}
+
+		 
+public static boolean isPrime(int number) {
+	for (int i = 2; i <= number / 2; i++) { 
+		if (number % i == 0) {
+			return false;
+				 }
+			 }
+			return true;
+		 }
+}
+
+package homework;
+
+public class Q10new {
+
+	public static void main(String[] args) {
+		int countPrime = 0;
+		
+		for (int i = 1; i<10000; i++) {
+			if (isPrime(i)) {
+				countPrime++;
+			}
+		}
+		System.out.println("The number (10000) has " + countPrime + " prime number.");
+			
+
+	}
+	
+	public static boolean isPrime(int number) {
+	for (int i = 2; i <= number / 2; i++) { 
+		if (number % i == 0) {
+			return false;
+				 }
+			 }
+			return true;
+		 }
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q17 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Enter n: ");
+		int n = input.nextInt();
+		
+		printMatrix(n);
+
+	}
+	
+	public static void printMatrix(int n) {
+		for (int i = 0; i < n; i ++) {
+			
+			for (int j = 0; j < n; j ++) {
+				
+				System.out.print((int)(Math.random() * 2) + " ");
+			}
+			System.out.println();
+		}
+	}
+
+}
+
+
+
+
+package homework;
+
+public class Q26 {
+
+	public static void main(String[] args) {
+		int count = 0;
+        for (int i = 2; count < 100; i++) {
+        	if (isPrime(i) && isPalindrome(i)) {
+        		if (count % 10 == 0) {
+              	     System.out.println();
+              	    }
+        		System.out.print(i+" ");
+        		count++;
+        		
+        	}
+        }
+	}
+
+
+
+	public static boolean isPrime(int number) {
+		for (int i = 2; i <= number / 2; i++) { 
+			if (number % i == 0) {
+				return false;
+					 }
+				 }
+				return true;
+			 }
+
+	public static int reverse(int number) {
+		int reverse = 0;
+		int digit;
+		while(number != 0){
+			digit = number % 10;
+			reverse = reverse * 10 + digit;
+			number = number / 10;
+	
+		}
+		return reverse;
+		
+	}
+	
+	public static boolean isPalindrome(int number) {
+		return (number == reverse(number));
+	}
+
+}
+package homework;
+
+public class Q27 {
+
+	public static void main(String[] args) {
+		int count = 0;
+        for (int i = 10; count < 100; i++) {
+        	if (isPrime(i) && isPrime(reverse(i)) && !isPalindrome(i)) {
+        		if (count % 10 == 0) {
+             	     System.out.println();
+             	    }
+        		 System.out.print(i + " ");
+        		 count++;
+        	}
+        }
+
+	}
+	
+	public static boolean isPrime(int number) {
+		for (int i = 2; i <= number / 2; i++) { 
+			if (number % i == 0) {
+				return false;
+					 }
+				 }
+				return true;
+			 }
+
+	public static int reverse(int number) {
+		int reverse = 0;
+		int digit;
+		while(number != 0){
+			digit = number % 10;
+			reverse = reverse * 10 + digit;
+			number = number / 10;
+	
+		}
+		return reverse;
+		
+	}
+	
+	public static boolean isPalindrome(int number) {
+		return (number == reverse(number));
+	}
+
+}
+
+package homework;
+
+public class Q28 {
+
+	public static void main(String[] args) {
+		
+		for (int i =2; i < 32; i++) {
+			int temp = mersennePrime(i);
+			
+			if (UsefulFunc.isPrime(temp)) {
+				System.out.println("P: " + i);
+				System.out.println("Mersenne prime: " + temp);
+				System.out.println();
+			}
+		}
+		
+		
+	}
+	
+	public static int mersennePrime(int num) {
+		return (int)((Math.pow(2, num)) - 1);
+	}
+
+
+}
+package homework;
+
+public class Q29 {
+
+	public static void main(String[] args) {
+		for (int i =2; i<1000 ;i++) {
+			if (UsefulFunc.isPrime(i) && UsefulFunc.isPrime(i+2)) {
+				System.out.println("("+ i +","+ (i+2) +")");
+			}
+		}
+
+	}
+
+}
+
+package homework;
+
+public class Q30 {
+
+	public static void main(String[] args) {
+		int sum = roll();
+		int points = 0;
+		
+		if (sum == 2 || sum == 3 || sum == 12) {
+			System.out.println("You lose");
+		}
+		else if (sum == 7 || sum == 11) {
+			System.out.println("You win");
+		}
+		else {
+			while (true) {
+				points = sum;
+				System.out.println("Point is " + points);
+				sum = roll();
+				if (sum == 7) {
+					System.out.println("You lose");
+					break;
+					}
+				else if (sum == points){
+					System.out.println("You win");
+					break;
+				}
+			}
+		}
+	}
+	
+	public static int roll() {
+		int num1 = (int)(Math.random() * 6) + 1;
+		int num2 = (int)(Math.random() * 6) + 1;
+		int sum = num1 + num2;
+		System.out.println("You rolled " + num1 + " + " + num2 + " = " + sum);
+		
+		return sum;
+	}
+}
+package homework;
+
+public class Q30new {
+
+	public static void main(String[] args) {
+		int dice1 = (int)(1 + Math.random() * 6);
+		int dice2 = (int)(1 + Math.random() * 6);
+		int sum = dice1 + dice2;
+		System.out.println("You rolled " + dice1 + "+" + dice2 + "=" + sum);
+		
+		boolean condition = false;
+		if ((sum==2)||(sum ==3)||(sum==12)) {
+			System.out.println("point is "+sum);
+			System.out.println ("You lose");
+			condition = true;
+		}
+			
+		else if ((sum==7)||(sum ==11)){
+			System.out.println("point is "+sum);
+			System.out.println("You win");
+			condition = true;
+		}
+		else {
+			System.out.println("point is "+sum);
+		}
+		
+		
+		while (condition == false) {
+
+			int newSum = 0;
+			int diceNew1 = (int)(1 + Math.random() * 6);
+			int diceNew2 = (int)(1 + Math.random() * 6);
+			newSum = diceNew1 + diceNew2;
+			
+			if (newSum == sum) {
+				System.out.println("You rolled " + diceNew1 + "+" + diceNew2 + "=" + newSum);
+				System.out.println("point is "+newSum);
+				System.out.println("You win");
+				break;
+			}
+			
+			else if (newSum == 7) {
+				System.out.println("You rolled " + diceNew1 + "+" + diceNew2 + "=" + newSum);
+				System.out.println("point is "+newSum);
+				System.out.println("You lose");
+				break;
+			}
+			
+			else {
+				System.out.println("You rolled " + diceNew1 + "+" + diceNew2 + "=" + newSum);
+				System.out.println("point is "+newSum);
+				sum = newSum;
+			}
+
+	}
+
+}
+}
+
+package homework;
+
+public class Q32 {
+
+	public static void main(String[] args) {
+		int mainCount = 0;
+		for (int i = 1; i <= 10000; i++) {
+//			System.out.println(oneTime());
+			mainCount += oneTime();
+		}
+		System.out.println("The game is winning " + mainCount +" times of 10,000.");
+	}
+		
+		
+		
+	public static int oneTime() {
+		int count =0;
+		int sum = roll();
+		int points = 0;
+		
+		if (sum == 2 || sum == 3 || sum == 12) {
+//			System.out.println("You lose");
+		}
+		else if (sum == 7 || sum == 11) {
+//			System.out.println("You win");
+			count++;
+		}
+		else {
+			while (true) {
+				points = sum;
+//				System.out.println("Point is " + points);
+				sum = roll();
+				if (sum == 7) {
+//					System.out.println("You lose");
+					break;
+					}
+				else if (sum == points){
+//					System.out.println("You win");
+					count++;
+					break;
+				}
+			}
+		}
+		return count;
+	}
+	
+	public static int roll() {
+		int num1 = (int)(Math.random() * 6) + 1;
+		int num2 = (int)(Math.random() * 6) + 1;
+		int sum = num1 + num2;
+//		System.out.println("You rolled " + num1 + " + " + num2 + " = " + sum);
+		
+		return sum;
+	}
+}
+package homework;
+
+public class UsefulFunc {
+
+	public static boolean isPrime(int number) {
+		for (int i = 2; i <= number / 2; i++) { 
+			if (number % i == 0) {
+				return false;
+					 }
+				 }
+				return true;
+			 }
+
+	public static int reverse(int number) {
+		int reverse = 0;
+		int digit;
+		while(number != 0){
+			digit = number % 10;
+			reverse = reverse * 10 + digit;
+			number = number / 10;
+	
+		}
+		return reverse;	
+	}
+	
+	public static boolean isPalindrome(int number) {
+		return (number == reverse(number));
+	}
+}
