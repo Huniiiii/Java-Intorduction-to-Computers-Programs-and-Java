@@ -1,0 +1,557 @@
+package homework;
+import java.util.Scanner;
+public class Q1 {
+
+	public static void main(String[] args) {
+		int bestScore = 0;
+		String grade = null;
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter the number of students: ");
+		int numOfStudents = input.nextInt();
+		
+		System.out.println("Enter " + numOfStudents  + " scores: ");
+		for (int i : numOfStudents) {
+			int scores = input.nextInt();
+		}
+		int[] scores1 = new int[numOfStudents];
+		
+		for (int i = 0; i < numOfStudents; i++) {
+			   if (bestScore < scores1[i]) {
+			    bestScore = scores1[i];
+			   }
+			  }
+		
+				
+		 for (int i = 0; i < numOfStudents; i++) {
+			   if (scores1[i] >= bestScore - 10) {
+				 grade = "A";
+			   }
+			   else if (scores1[i] >= bestScore - 20) {
+				 grade = "B";
+			   }
+			   else if (scores1[i] >= bestScore - 30) {
+				 grade = "C";
+			   }
+			   else if (scores1[i] >= bestScore - 40) {
+				 grade = "D";
+			   }
+			   else {
+				 grade = "F";
+			   }
+			   
+			System.out.println("Student " + i +" score is " + scores1[i] +" and grade is " + grade);
+		 }
+			   
+
+	}
+
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q1New {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int bestScore = 0;
+		String grade = null;
+		
+		System.out.print("Enter the number of students: ");
+		int numOfStudents = input.nextInt();
+		
+		System.out.print("Enter " + numOfStudents  + " scores: ");
+		int[] scores = new int[numOfStudents];
+		for (int i = 0; i < numOfStudents; i++) {
+			scores[i] = input.nextInt();
+			
+		}
+		
+		for (int i = 0; i < numOfStudents; i++) {
+			if (bestScore < scores[i]) {
+			    bestScore = scores[i];
+			   }
+		}
+		
+		for (int i = 0; i < numOfStudents; i++) {
+			   if (scores[i] >= bestScore - 10) {
+				 grade = "A";
+			   }
+			   else if (scores[i] >= bestScore - 20) {
+				 grade = "B";
+			   }
+			   else if (scores[i] >= bestScore - 30) {
+				 grade = "C";
+			   }
+			   else if (scores[i] >= bestScore - 40) {
+				 grade = "D";
+			   }
+			   else {
+				 grade = "F";
+			   }
+			   
+			System.out.println("Student " + i +" score is " + scores[i] +" and grade is " + grade);
+		 }
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q2 {
+
+	public static void main(String[] args) {
+		 Scanner input = new Scanner(System.in);
+		 
+	       System.out.print("Enter ten integers: ");
+	       int[] numbers = new int[10];
+
+	       for (int i = 0; i < 10; i++) {
+	        	numbers[i] = input.nextInt();
+	        }
+	        
+	       for (int i = 10 - 1; i >= 0; i--) {
+	        	System.out.print(numbers[i] + " ");
+	        }
+	       System.out.println("Length of your array is " + numbers.length);
+	    }
+	}
+
+
+
+
+package homework;
+import java.util.Scanner;
+public class Q3 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter the integers between 1 and 100: ");
+		
+		
+		int[] numbers = new int[10];
+
+	       for (int i = 0; i < 100; i++) {
+	        	numbers[i] = input.nextInt();
+	        	System.out.print(numbers[i] + " ");
+	        }
+	       
+	       
+	       for (int i = 1; i <= 100; i++) {
+	            int count = 0;
+	            for (int j = 0; j < numbers.length - 1; j++) {
+	                if (numbers[j] == i)
+	                    count += 1;
+	                
+	                else {
+	                	System.out.println(numbers[j]+ " occurs " + count+ "times");
+	                }
+
+		
+	            }
+	       }
+	}
+		
+	    
+			
+
+	}
+		
+	}
+
+
+
+package homework;
+import java.util.Scanner;
+public class Q3new {
+
+	public static void main(String[] args) {
+		int[] numbers = new int [100];
+		System.out.print("Enter the integers between 1 and 100: ");
+		
+		Scanner input = new Scanner(System.in);
+		
+		while (true) {
+			int num = input.nextInt();
+			
+			if(num >=1 && num <=100) {
+				numbers[num - 1]++;
+			}
+			
+			else if (num == 0) {
+				break;
+			}
+		}
+		
+		for (int i =0; i < numbers.length; i++) {
+			if (numbers[i] == 1) {
+				System.out.println((i + 1) + " occures " + numbers[i] + " time");
+			}
+			
+			else if (numbers[i] > 1) {
+				System.out.println((i + 1) + " occurs " + numbers[i] + " times");
+			}
+		}
+
+		
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q5 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Enter ten numbers: ");
+		
+		// create an empty array to receive numbers from the user
+		int[] original = new int[10];
+		
+		// receive ten integers from the user
+		for (int i = 0; i <= 9; i++) {
+        	int num = input.nextInt();
+        	
+        	original[i] = num;
+        	
+		}
+        	
+        int[] distinct = new int[10];
+        
+        
+        // loop through original
+        int index = 0;
+        
+        for (int i : original) {
+        	boolean flag = false;
+        	
+        	for (int j : distinct) {
+        		if (i == j) {
+        			flag = true;
+        		}
+        	}
+        	if (flag == false) {
+        		distinct[index] = i;
+        		index++;
+        	}
+        }
+        
+        System.out.print("The distinct numbers are: ");
+        for (int k : distinct) {
+        	if (k != 0) {
+        	System.out.print(k+ " ");
+        	}
+        }
+	}
+}
+
+package homework;
+
+public class Q7 {
+
+	public static void main(String[] args) {
+		
+		int[] countList = new int[10];
+		for (int i = 0; i < 100; i++) {
+			int ranNum = (int)(Math.random() * 10);
+			countList[ranNum]++;
+
+		}
+		
+		for (int i = 0; i <10; i++) {
+			System.out.println(i + " : " + countList[i]);
+		}
+			
+	}
+
+}
+
+
+package homework;
+import java.util.Scanner;
+public class Q9 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		double[] nums = new double[10];
+//		double[] min = new double[0];
+		
+		System.out.print("Enter ten numbers: ");
+		for (int i = 0; i <= nums.length; i++) {
+			nums[i] = input.nextDouble();
+		}
+		 System.out.println("The minimum number is: " + min(nums));
+	}
+		
+		
+		public static double min(double[] array) {
+		double min = array[0];
+	
+			   for (double i: array) {
+				   if (i < min)
+						min = i;
+				}
+				  
+				  return min;
+
+}
+}
+
+package homework;
+import java.util.Scanner;
+public class Q10 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		double[] nums = new double[10];
+		
+		System.out.print("Enter ten numbers: ");
+		for (int i = 0; i < nums.length; i++) {
+			nums[i] = input.nextDouble();
+		}
+		
+		double min_index = indexOfSmallestElement(nums);
+////		
+//		System.out.println(min_index);
+		System.out.println("The index of the smallest number is: " + indexOfSmallestElement(nums));
+
+	}
+	
+	public static double indexOfSmallestElement(double[] array) {
+		double min = array[0];
+		double index = 0;
+		
+		for (int i = 1; i < array.length; i++) {
+			if (array[i] < min) {
+				min = array[i];
+				index = i;
+			}
+			 
+
+}
+		return index;
+
+	}
+	
+}
+
+
+package homework;
+import java.util.Scanner;
+public class Q26 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int[] list1 = new int[6]; 
+		int[] list2 = new int[6]; 
+		
+		System.out.print("Enter your list 1: ");
+		for(int i = 0; i < list1.length; i++){
+			list1[i] = input.nextInt();
+		}
+			
+		System.out.print("Enter your list 2: ");
+		for(int j = 0; j < list2.length; j++){
+			list2[j] = input.nextInt();
+		}
+		
+		if(equals(list1, list2) == true) {
+			System.out.println("Two lists are strictly identical");
+		}
+		
+		else if(equals(list1, list2) == false){
+			System.out.println("Two lists are not strictly identical");
+		}
+
+	}
+	
+	public static boolean equals(int[] list1, int[] list2) {
+		for (int i = 0; i < list1.length; i++) {
+			if (list1[i] != list2[i]) {
+				return false;
+			}
+			if (list1.length != list2.length) {
+				return false;
+			}
+		}
+		
+		return true;
+		
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q27 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		int[] list1 = new int[6]; 
+		int[] list2 = new int[6]; 
+		
+		System.out.print("Enter your list 1: ");
+		for(int i = 0; i < list1.length; i++){
+			list1[i] = input.nextInt();
+		}
+			
+		System.out.print("Enter your list 2: ");
+		for(int j = 0; j < list2.length; j++){
+			list2[j] = input.nextInt();
+		}
+		
+		if(equals(list1, list2) == true) {
+			System.out.println("Two lists are identical");
+		}
+		
+		else if(equals(list1, list2) == false){
+			System.out.println("Two lists are not identical");
+		}
+
+	}
+	
+	public static boolean equals(int[] list1, int[] list2) {
+		sort(list1);
+		sort(list2);
+		if (list1.length != list2.length) {
+			return false;
+		}
+		for (int i = 0; i < list1.length; i++) {
+			if (list1[i] != list2[i])
+				return false;
+		}
+		return true;
+	}
+	
+	public static void sort(int[] newList) {
+		for (int i = 0; i < newList.length - 1; i++) {
+			int min = newList[i];
+			int minIndex = i;
+		
+		for (int j = i + 1; j < newList.length; j++) {
+			if (newList[j] < min) {
+				min = newList[j];
+				minIndex = j;
+			}
+		}
+
+		if (minIndex != i) {
+			newList[minIndex] = newList[i];
+			newList[i] = min; 
+		}
+		}
+		
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q31 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		int[] list1 = new int[6]; 
+		int[] list2 = new int[6];
+	
+		
+		System.out.print("Enter your list 1: ");
+		for(int i = 0; i < list1.length; i++){
+			list1[i] = input.nextInt();
+		}
+			
+		System.out.print("Enter your list 2: ");
+		for(int j = 0; j < list2.length; j++){
+			list2[j] = input.nextInt();
+		}
+		
+		int [] list3 = merge(list1, list2);
+		sort(list3);
+		for (int i = 0; i < list3.length ; i++) {
+			System.out.print(list3[i] + " ");
+		}
+
+	}
+	
+	public static int[] merge(int[] list1, int[] list2) {
+		int[] newList = new int[12];
+		for (int i = 0; i < list1.length; i++) {
+			newList[i] = list1[i];
+		}
+
+		for (int j = 6; j < list1.length + list2.length; j++) {
+			newList[j] = list2[j-6];	
+		}
+		return newList;
+
+		
+	}
+
+	
+	
+	public static void sort(int[] newList) {
+		for (int i = 0; i < newList.length - 1; i++) {
+			int min = newList[i];
+			int minIndex = i;
+		
+		for (int j = i + 1; j < newList.length; j++) {
+			if (newList[j] < min) {
+				min = newList[j];
+				minIndex = j;
+			}
+		}
+
+		if (minIndex != i) {
+			newList[minIndex] = newList[i];
+			newList[i] = min; 
+		}
+		}
+		
+	}
+
+
+}
+
+package homework;
+
+import java.util.Scanner;
+public class Q32 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int[] list1 = new int[6];
+		System.out.print("Enter list: ");
+		for(int i = 0; i < list1.length; i++){
+			list1[i] = input.nextInt();
+		}
+		
+		int pivot = list1[0];
+		System.out.println("Pivot: " + pivot);
+		
+		int count = 0;
+		for (int i = 0; i < list1.length; i++) {
+			if (list1[i] <= pivot) {
+				count++;
+			}
+		}
+		count -= 1;
+		System.out.println("Count: " + count);
+		
+		int[] list2 = new int[list1.length];
+		list2[count] = pivot;
+		
+		for (int i:list2) {
+			System.out.print(i + " ");
+		}
+	}
+
+}
