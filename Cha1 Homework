@@ -1,0 +1,158 @@
+package homework;
+
+public class Q1 {
+	public static void main(String ars[]) {
+		
+		System.out.println("Welcome to Java");
+		System.out.println("Welcome to Computer Science");
+		System.out.println("Programming is fun");
+	}
+
+}
+
+package homework;
+
+public class Q2 {
+	public static void main(String ars[]) {
+		System.out.println("Welcome to Java");
+		System.out.println("Welcome to Java");
+		System.out.println("Welcome to Java");
+		System.out.println("Welcome to Java");
+		System.out.println("Welcome to Java");
+	}
+
+}
+
+package homework;
+
+public class Q3 {
+	public static void main(String ars[]) {
+		System.out.println("   J     A   V     V   A");
+		System.out.println("   J    A A   V   V   A A");
+		System.out.println("J  J   AAAAA   V V   AAAAA");
+		System.out.println(" J J  A     A   V   A     A");
+	}
+
+}
+
+package homework;
+
+public class Q4 {
+	public static void main(String ars[]) {
+		System.out.println("a a^2 a^3");
+		System.out.println("1 1 1");
+		System.out.println("2 4 8");
+		System.out.println("3 9 27");
+		System.out.println("4 16 64");
+	}
+
+}
+
+package homework;
+
+public class Q5 {
+	public static void main(String ars[]) {
+		System.out.println((9.5 * 4.5 - 2.5 * 3) / (45.5 - 3.5));
+	}
+
+}
+
+
+package homework;
+
+public class Q6 {
+	public static void main(String ars[]) {
+		System.out.println(1+2+3+4+5+6+7+8+9);
+	}
+
+}
+
+package homework;
+
+public class Q7 {
+	public static void main(String ars[]) {
+		System.out.println(4.0 * (1 - (1.0 / 3) + (1.0 / 5) - (1.0 / 7) + (1.0 / 9) - (1.0 / 11)));
+		System.out.println(4.0 * (1 - (1.0 / 3) + (1.0 / 5) - (1.0 / 7) + (1.0 / 9)
+	            * (1.0 / 11) - (1.0 / 13)));
+	}
+
+}
+
+package homework;
+
+public class Q8 {
+	public static void main(String ars[]) {
+		System.out.println("Perimeter = ");
+		System.out.println(2 * 5.5 * 3.14159);
+		System.out.println("Area = ");
+		System.out.println(Math.pow(5.5,2) * 3.14159);
+	}
+
+}
+
+package homework;
+
+public class Q9 {
+	public static void main(String ars[]){
+		double area;
+		double width = 4.5;
+		double height = 7.9;
+		
+		area = width +height;
+		System.out.println(area);
+	}
+
+}
+
+package homework;
+
+public class Q10 {
+	public static void main(String ars[]) {
+		
+		double hours = 45.5/60;
+		double miles = 14/1.6;
+		
+		System.out.println(miles/hours)
+		
+		///// question!!!!!!!!!!!!!!!!
+	}
+
+}
+
+package homework;
+
+public class Q11 {
+	 public static void main (String [] args) {
+	        double intPop = 312032486;
+	        double SecondsInYear = 31536000;
+	        double birthsPerYear = SecondsInYear / 7;
+	        double deathsPerYear = SecondsInYear / 13;      
+	        double immigrantsPerYear = SecondsInYear / 45;
+	        double changePerYear = birthsPerYear - deathsPerYear + immigrantsPerYear;
+	         
+	        System.out.println("After 1 year : " + intPop + changePerYear);
+	        System.out.println("After 2 years:  " + intPop + (2 * changePerYear));
+	        System.out.println("After 3 years:  " + intPop + (3 * changePerYear));
+	        System.out.println("After 4 years:  " + intPop + (4 * changePerYear));
+	        System.out.println("After 5 years:  " + intPop + (5 * changePerYear));
+	 }
+
+}
+
+package homework;
+
+public class Q12 {
+	public static void main(String ars[]) {
+		
+		double kilom = 24*1.6;
+		
+		double minutes = 40.0/60;
+		double seconds  = (35.0/60)/60;
+		
+		double time = 1 + minutes +  seconds;
+		
+		System.out.println(kilom /time );
+		
+	}
+
+}
