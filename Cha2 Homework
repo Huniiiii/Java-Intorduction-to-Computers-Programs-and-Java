@@ -1,0 +1,468 @@
+package homework;
+import java.util.Scanner;
+public class Q1 {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Enter a degree in Celsius: ");
+		int celsius = input.nextInt();
+		
+		double fahrenhit = (9.0/5) * celsius +32;
+		
+		System.out.println(celsius + " Celsius is " + fahrenhit + " Fahrenheit");
+		
+		
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q2 {
+
+	public static void main(String[] args) {
+		System.out.println("Enter the radius and length of a cylinder: ");
+		Scanner input = new Scanner(System.in);
+		double radius = input.nextDouble();
+		double length = input.nextDouble();
+		
+		double area = Math.pow(radius, 2) * 3.14;
+		double volume = area * length;
+		
+		System.out.println("The area is " + area);
+		System.out.println("The volume is " + volume);
+		
+		
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q3 {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter a value for feet: ");
+		double feet = input.nextDouble();
+		
+		double meters = feet * 0.305;
+		
+		System.out.println(feet + " feet is " + meters + "meters");
+		
+		
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q4 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Enter a number in pounds: ");
+		
+		double pounds = input.nextDouble();
+		double kilograms = pounds * 0.454;
+		
+		System.out.println(pounds + "pounds is " + kilograms + "kilograms");
+		
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q5 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		System.out.print("Enter the subtotal and a gratuity rate: ");
+		double subtotal = input.nextDouble();
+		double gratuityRate = input.nextDouble();
+
+
+		double gratuity = subtotal * (gratuityRate / 100);
+		double total = subtotal + gratuity;
+
+		System.out.println("The gratuity is $ " + gratuity +
+			" and total is $ " + total);
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q6 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		System.out.print("Enter a number between 0 and 1000: ");
+		int number = input.nextInt();
+
+		int first = number % 10;
+		number /= 10;
+		int second = number % 10;
+		number /= 10;
+		int thrid = number % 10;
+		number /= 10;
+		int sum = thrid + second + first;	
+
+		System.out.println("The sum of the digits is " + sum);
+
+	}
+
+}
+package homework;
+
+public class Q7 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+package homework;
+import java.util.Scanner;
+public class Q8 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the time zone offset to GMT: ");
+		long userInput = input.nextLong();
+		
+		long totalMilliseconds = System.currentTimeMillis();
+		long totalSeconds = totalMilliseconds / 1000;
+		long currentSecond = totalSeconds % 60;
+		long totalMinutes = totalSeconds / 60;
+		long currentMinute = totalMinutes % 60;
+		long totalHours = totalMinutes / 60;
+		long currentHour = totalHours % 24;
+		
+		long newCurrentHour = currentHour + userInput;
+		
+		if (newCurrentHour <0 ) {
+			newCurrentHour +=24;
+		
+		}
+		
+		else if (newCurrentHour >23) {
+			newCurrentHour -=24;
+		}
+		
+		
+		System.out.println("Current time is " + newCurrentHour + ":"
+							+ currentMinute + ":" + currentSecond + " GMT");
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q9 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Enter v0, v1 and t: ");
+		
+		double v0 = input.nextDouble();
+		double v1 = input.nextDouble();
+		double t = input.nextDouble();
+
+		double acceleration = (v1 - v0) / t;
+
+		System.out.println("The average acceleration is " + acceleration);
+
+	}
+
+}
+
+
+package homework;
+import java.util.Scanner;
+public class Q10 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter the amount of water in kilograms: ");
+		double kilograms = input.nextDouble();
+		System.out.println("Enter the initial temperature: ");
+		double initialTemperature = input.nextDouble();
+		System.out.println("Enter the final temperature: ");
+		double finalTemperature = input.nextDouble();
+		
+		double Q = kilograms * (finalTemperature - initialTemperature) * 4184;
+		
+		System.out.println("The energy needed is " + Q);
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q11 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		System.out.print("Enter the number of years: ");
+		int years = input.nextInt();
+
+		int population = 312032486 + (((31536000 / 7) - (31536000 / 13)
+								+ (31536000 / 45)) * years);
+
+		System.out.println("The population in " + years + " is " + population);
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q12 {
+
+	public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter speed and acceleration: ");
+        double speed = input.nextDouble();
+        double acceleration = input.nextDouble();
+
+        double length = (speed * speed) / (2 * acceleration);
+    
+        System.out.printf("The minimum runway length for this airplane is ", length);
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q13 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter the monthly saving amount:");
+		
+		double amount = input.nextDouble();
+		
+		double firtMonth = amount * (1 +0.00417);
+		double secondMonth = (amount + firtMonth) * (1+0.00417);
+		double thirdMonth = (amount + secondMonth) * (1+0.00417);
+		double total = firtMonth + secondMonth +thirdMonth;
+		
+		System.out.println("After the sixth month, the account value is " + total);
+
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q14 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter weight in pounds:");
+		double pounds = input.nextDouble();
+		
+		System.out.println("Enter height in inches:");
+		double inch = input.nextDouble();
+		
+		double kg = pounds * 0.45359237;
+		double m = inch * 0.0254;
+		
+		double bmi = kg / (Math.pow(m, 2));
+		
+		System.out.println("BMI is " + bmi);
+	
+
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q15 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter three points for a triangle: ");
+		
+		double x1 = input.nextDouble();
+		double y1 = input.nextDouble();
+		double x2 = input.nextDouble();
+		double y2 = input.nextDouble();
+		double x3 = input.nextDouble();
+		double y3 = input.nextDouble();
+		
+		double side1 = Math.pow(Math.pow((x2-x1),2) + Math.pow((y2-y1),2),0.5);
+		double side2 = Math.pow(Math.pow((x1-x3),2) + Math.pow((y1-y3),2),0.5);
+		double side3 = Math.pow(Math.pow((x2-x3),2) + Math.pow((y2-y3),2),0.5);
+		
+		double s = Math.pow((side1 + side2 + side3),2);
+		double area = Math.pow(s * (s - side1) * (s - side2) * (s - side3), 0.5);
+		
+		System.out.println(area);
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q17 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter the temperature in Fahrenheit: ");
+		double Fahrenheit = input.nextDouble();
+		
+		System.out.println("Enter the wind speed in miles per hour: ");
+		double speed = input.nextDouble();
+		
+		
+		double windChillIndex = 35.74 + 0.6215 * Fahrenheit - 35.75 * Math.pow(speed, 0.16) + 0.4275 * Fahrenheit * Math.pow(speed, 0.16);
+		
+		System.out.println("The wind chill index is " + windChillIndex);
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q20 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		System.out.print("Enter balance and interest rate (e.g., 3 for 3%): ");
+		double balance = input.nextDouble();
+		double annualInterestRate = input.nextDouble();
+
+		double interest = balance * (annualInterestRate / 1200);
+
+		System.out.println("The interest is " + interest);
+		
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q21 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter investment amount: ");
+		double investmentAmount = input.nextDouble();
+		
+		System.out.println("Enter annual interest rate in percentage: ");
+		double percentage = input.nextDouble();
+		double newPercentage = percentage/ 1200;
+		
+		System.out.println("Enter number of years: ");
+		double year = input.nextDouble();
+		
+		double futureInvestmentValue = investmentAmount * Math.pow(1 + newPercentage, year * 12);
+		
+		System.out.println("Accumulated value is $" + futureInvestmentValue);
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q24Question {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter an amount as integer, for example 1156 for 1156: ");
+		int amount = input.nextInt();
+		int remainingAmount = amount;
+
+			
+		int numberOfOneDollars = remainingAmount / 100;
+		remainingAmount = remainingAmount % 100;
+
+
+		int numberOfQuarters = remainingAmount / 25;
+		remainingAmount = remainingAmount % 25;
+
+
+		int numberOfDimes = remainingAmount / 10;
+		remainingAmount = remainingAmount % 10;
+
+
+		int numberOfNickels = remainingAmount / 5;
+		remainingAmount = remainingAmount % 5;
+
+
+		int numberOfPennies = remainingAmount;
+
+		System.out.println("Your amount " + amount + " consists of");
+		System.out.println(" " + numberOfOneDollars + " dollars");
+		System.out.println(" " + numberOfQuarters + " quarters");
+		System.out.println(" " + numberOfDimes + " dimes");
+		System.out.println(" " + numberOfNickels + " nickels");
+		System.out.println(" " + numberOfPennies + " pennies");
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q25 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		System.out.print("Enter employee��s name: ");
+		String name = input.nextLine();	
+		System.out.print("Enter number of hours worked in a week: ");
+		double hoursWorked = input.nextDouble();
+		System.out.print("Enter hourly pay rate: ");
+		double hourlyPayRate = input.nextDouble();
+		System.out.print("Enter federal tax withholding rate: ");
+		double federalTaxRate = input.nextDouble();
+		System.out.print("Enter state tax withholding rate: ");
+		double stateTaxRate = input.nextDouble();
+
+		// Display payroll statement
+		double grossPay, federal, state, totalDeduction;
+		System.out.printf(
+			"Employee Name: " + name + 
+			"\nHours Worked: " + hoursWorked +
+			"\nPay Rate: $" + hourlyPayRate +
+			"\nGross Pay: $" + (grossPay = hoursWorked * hourlyPayRate) +
+			"\nDeductions:\n   Federal Witholding (20.0%): $" +
+			(federal = grossPay * federalTaxRate) +
+			"\n   State Witholding (9.0%): $" + (state = grossPay * stateTaxRate) +
+			"\n   Total Deduction: $" + (totalDeduction = federal + state) +
+			"\nNet Pay: $" + (grossPay - totalDeduction);
+
+	}
+
+}
