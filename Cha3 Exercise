@@ -1,0 +1,76 @@
+package exercise;
+import java.util.Scanner;
+public class exercise {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int num = (int)(Math.random() * 101);
+		
+		System.out.println("Guess a magic numer between 0 and 100");
+		
+		int guess = -1;
+		while (guess != num) {
+			System.out.print("Enter your guess: ");
+			guess = input.nextInt();
+			
+			if (guess == num) {
+				System.out.println("Yes, the number is ");
+			}
+			
+			else if (guess > num) {
+				System.out.println("No, the numer is larger");
+			}
+			
+			else {
+				System.out.println("No, the number is smaller");
+			}
+		}
+	}
+
+}
+
+package exercise;
+import java.util.Scanner;
+public class exercise3 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Your name: ");
+		String name = input.nextLine();
+		
+		if ((name.equals("huni")) || (name == "steve")) {
+			System.out.println("Hello");
+		}
+		
+		else {
+			System.out.print("Bye");
+		}
+
+	}
+
+}
+
+package exercise;
+
+public class exercises {
+
+	public static void main(String[] args) {
+		// true and false
+		boolean
+		
+		if (condition) {
+			your code;
+		}
+		
+		else if (condition){
+			
+		}
+		
+		else {
+			
+		}
+
+	}
+
+}
