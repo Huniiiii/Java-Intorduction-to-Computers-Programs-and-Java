@@ -1,0 +1,698 @@
+package homework;
+import java.util.Scanner;
+public class Q1 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter a, b, c: ");
+		double a,b,c;
+		a = input.nextDouble();
+		b = input.nextDouble();
+		c = input.nextDouble();
+		
+		double discriminant = Math.pow(b, 2) - 4 * a * c;
+		
+		if (discriminant>0) {
+			System.out.println("First root is " +(-b + Math.pow(discriminant, 0.5)) / (2 * a));  
+			System.out.println("Second root is " +(-b - Math.pow(discriminant, 0.5)) / (2 * a));  
+
+		}
+		
+		else if (discriminant ==0) {
+			System.out.println("The first root is " + (-b + Math.pow(discriminant, 0.5)) / (2 * a));
+		}
+		
+		else {
+			System.out.println("No real root");
+		}
+		}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q2 {
+
+	public static void main(String[] args) {
+		int number1 = (int)(System.currentTimeMillis()%10); //creating ramdon
+		int number2 = (int)(System.currentTimeMillis()/7%10); //creating ramdon
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("What is " + number1 + " + " + number2 + "?" );
+		
+		int answer = input.nextInt();
+		
+		System.out.println(number1 + " + " + number2 + " = " + answer + " is " + (number1 + number2 == answer));
+		
+		}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q4 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+	
+		
+		
+		
+		while (true) {
+			long num1 = (System.currentTimeMillis() % 100);
+			int num2 = (int)(System.currentTimeMillis() / 7 % 100);
+			System.out.print(num1 + " + " + num2 + " = ");
+			int ans = input.nextInt();
+		
+			if (ans == (num1 + num2)) {
+				System.out.println("Huni !");
+				break;
+			}
+			
+			else {
+				System.out.println("Huni !");
+			}
+		}
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q5 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Please select numer between 1 to 5: ");
+		int num = input.nextInt();
+		
+		switch (num) {
+			case 1: System.out.println("You picked " +1); break;
+			case 2: System.out.println("You picked " +2); break;
+			case 3: System.out.println("You picked " +3); break;
+			case 4: System.out.println("You picked " +4); break;
+			case 5: System.out.println("You picked " +5);
+		}
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q5Main {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter today's day: ");
+		int todayDay = input.nextInt();
+		System.out.println("Enter the number of days elapsed since today: ");
+		int elapsedDay = input.nextInt();
+		
+		int newDay = (todayDay+elapsedDay)%7;
+		
+		switch(todayDay) {
+		case 0: System.out.print("Today is Sunday"); break;
+		case 1: System.out.print("Today is Monday"); break;
+		case 2: System.out.print("Today is Tuesday"); break;
+		case 3: System.out.print("Today is Wednesday"); break;
+		case 4: System.out.print("Today is Thursday"); break;
+		case 5: System.out.print("Today is Friday"); break;
+		case 6: System.out.print("Today is Saturday");
+		}
+		
+		
+		switch(newDay) {
+		case 0: System.out.print(" and the future day is Sunday"); break;
+		case 1: System.out.print(" and the future day is Monday"); break;
+		case 2: System.out.print(" and the future day is Tuesday"); break;
+		case 3: System.out.print(" and the future day is Wednesday"); break;
+		case 4: System.out.print(" and the future day is Thursday"); break;
+		case 5: System.out.print(" and the future day is Friday"); break;
+		case 6: System.out.print(" and the future day is Saturday");
+		}
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q8 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Input your three numbers: ");
+		
+		int num1 = (int) (System.currentTimeMillis() % 10);
+		int num2 = (int) (System.currentTimeMillis() /7 % 10);
+		int num3 = (int) (System.currentTimeMillis() *3 % 10);
+		int temp;
+
+		if (num1 > num2) {
+			temp = num2;
+			num2 = num1;
+			num1 = temp;
+		}
+		
+		if (num2 > num3) {
+			temp = num3;
+			num3 = num2;
+			num2 = temp;
+		}
+		
+		if (num1 > num2) {
+			temp = num2;
+			num2 = num1;
+			num1 = temp;
+		}
+
+		System.out.println("The largest numer is " + num3);
+		System.out.println("The second largest numer is " + num2);
+		System.out.println("The smallest numer is " + num1);
+		
+		
+			
+		}
+		
+
+	}
+
+
+
+package homework;
+import java.util.Scanner;
+public class Q9 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Enter the first 9 digits of an ISBN as integer: ");
+		
+		int isbn = input.nextInt();
+		int d1 = isbn / 100000000;
+		int d2 = (isbn % 100000000) / 10000000;
+		int d3 = (isbn % 10000000) / 1000000;
+		int d4 = (isbn % 1000000) / 100000;
+		int d5 = (isbn % 100000) / 10000;
+		int d6 = (isbn % 10000) / 1000;
+		int d7 = (isbn % 1000) / 100;
+		int d8 = (isbn % 100) / 10;
+		int d9 = (isbn % 10);
+		
+		int d10 = ((d1 * 1 + d2 * 2 + d3 * 3 + d4 * 4 + d5 * 5 + d6 * 6 + d7 * 7 + d8 * 8 + d9 * 9) % 11);
+		
+		System.out.print("The ISBN-10 number is " + d1 + d2 + d3 + d4 + d5 + d6 + d7 + d8 + d9);
+		
+		if (d10 == 10) {
+			System.out.println("X");
+		}
+
+		else {
+			System.out.println(d10);
+		}
+		
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q12 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter your number: ");
+		int value = input.nextInt();
+		
+		if ((value % 5 == 0) && (value % 6 == 0) ) {
+			System.out.println(value + " is divisible by both 5 and 6.");
+		}
+			
+			
+		else if ((value % 5 == 0) || (value % 6 == 0)) {
+			System.out.println(value + " is divisible by 5 or 6, but not both.");
+		}
+		
+		else {
+			System.out.println(value + " is not divisible by either 5 or 6.");
+		}
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q14 {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter your number between 0 to 1: ");
+		int userInput = input.nextInt();
+		
+		double random = Math.random();
+		
+		if ((random >0.5)) {
+			random = 1;
+		}
+		
+		else {
+			random =0;
+		}
+		
+		if (userInput == (int) random) {
+			System.out.print("You are right!");
+		}
+		else {
+			System.out.print("You are wrong");
+		}
+		
+		
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q15 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter your number: ");
+		int guess = input.nextInt();
+		
+		int random = (int) (System.currentTimeMillis() % 1000);
+		
+		System.out.println(random);
+		
+		int randomDigit1 = random / 100;
+		int randomDigit2 = (random % 100) / 10;
+		int randomDigit3 = random % 10;
+		
+		 
+		int guessDigit1 = guess / 100;
+		int guessDigit2 = (guess % 100) / 10;
+		int guessDigit3 = guess % 10;
+		
+		if (guess == random) {
+			System.out.println("Exact match: you win $10,000");
+		}
+		   
+		
+		else if ((guessDigit1 == randomDigit2 && guessDigit2 == randomDigit1 && guessDigit3 == randomDigit3)
+				|| (guessDigit1 == randomDigit2 && guessDigit1 == randomDigit3 && guessDigit3 == randomDigit1)
+			    || (guessDigit1 == randomDigit3 && guessDigit2 == randomDigit1 && guessDigit3 == randomDigit2)
+			    || (guessDigit1 == randomDigit3 && guessDigit2 == randomDigit2 && guessDigit3 == randomDigit1)
+			    || (guessDigit1 == randomDigit1 && guessDigit2 == randomDigit3 && guessDigit3 == randomDigit2)) {
+			System.out.println("Oh, nice, you win $3,000");
+		}
+		
+			
+		else if((guessDigit1 == randomDigit1 || guessDigit1 == randomDigit2 || guessDigit1 == randomDigit3 
+				|| guessDigit2 == randomDigit1|| guessDigit2 == randomDigit2 || guessDigit2 == randomDigit3
+			    || guessDigit3 == randomDigit1 || guessDigit3 == randomDigit2|| guessDigit3 == randomDigit3)){
+			System.out.println("Oh, you win $1,000");
+			
+		}
+		
+		else {
+			System.out.println("Nooooooo, you didn't win any prize");
+		}
+		 
+
+		 
+		 
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q17 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int comp_num = (int)(Math.random() *3);
+		
+		System.out.print("scissor (0), rock (1), paper (2): ");
+		int user_num = input.nextInt();
+		
+		String comp = null;
+		String user = null;
+		
+		
+		
+		switch (comp_num) {
+		case 0 : comp = "scissor"; break;
+		case 1 : comp = "rock"; break;
+		case 2 : comp = "paper"; break;
+		}
+		
+		switch (user_num) {
+		case 0 : user = "scissor"; break;
+		case 1 : user = "rock"; break;
+		case 2 : user = "paper"; break;
+		}
+
+		 System.out.print("The computer is " + comp + ". You are " + user);
+		
+		 if (comp_num == user_num) {
+			 System.out.println(", it is a draw");
+		 }
+		 else if ((user_num == 0 && comp_num == 2) ||(user_num == 1 && comp_num == 0) || (user_num == 2 && comp_num == 1)) {
+			 System.out.println(", you won");
+		 }
+		 
+		 else
+			 System.out.println(", you lose");
+		 	
+
+	}
+
+}
+
+
+
+package homework;
+import java.util.Scanner;
+public class Q19 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter your first edge of the triangle: ");
+		double num1 = input.nextDouble();
+		
+		System.out.println("Enter your second edge of the triangle: ");
+		double num2 = input.nextDouble();
+		
+		System.out.println("Enter your second edge of the triangle: ");
+		double num3 = input.nextDouble();
+
+		
+		
+		
+		if ((num2 + num3 > num1) && (num1 + num3 > num2) && (num1 + num2 > num3)) {
+			System.out.println("It is valid.");
+			double perimeter = num1 + num2 + num3;
+			System.out.println("The perimeter is " + perimeter);
+		} 
+		else {
+			System.out.println("The numbers are not valid.");
+		
+	}
+		
+		
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q22 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		System.out.print("Enter a point with two coordinates: ");
+		double x = input.nextDouble();
+		double y = input.nextDouble();
+
+		if (Math.pow(Math.pow(x, 2) + Math.pow(y, 2), 0.5) <= 10) {
+			System.out.println("Point (" + x + ", "+ y + ") is " + "in the circle");
+		}
+		
+		else {
+			System.out.println("Point (" + x + ", "+ y + ") is " + "not in the circle"); 
+		}
+
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q23 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Enter a point with two coordinates: ");
+		double x = input.nextDouble();
+		double y = input.nextDouble();
+		
+		double disRectangleX = Math.pow(Math.pow(x, 2),0.5);
+		double disRectangleY = Math.pow(Math.pow(y, 2),0.5);
+		
+		if ((disRectangleX <= 10.0/2) && (disRectangleY <= 5.0/2 )){
+			System.out.println("Point (" + x + ", "+ y + ") is in the rectangle");
+		}
+		
+		else {
+			System.out.println("Point (" + x + ", "+ y + ") is not in the rectangle");
+		}
+
+	}
+
+}
+
+package homework;
+
+public class Q24 {
+
+	public static void main(String[] args) {
+		int rankNum = (int)(Math.random() * 13);
+		
+		int suitNum = (int)(Math.random() * 4);
+		
+		String rank = null;
+		String suit = null;
+		switch(rankNum) {
+		case 0: rank = "Ace"; break;
+		case 1: rank = "1"; break;
+		case 2: rank = "2"; break;
+		case 3: rank = "3"; break;
+		case 4: rank = "4"; break;
+		case 5: rank = "5"; break;
+		case 6: rank = "6"; break;
+		case 7: rank = "7"; break;
+		case 8: rank = "8"; break;
+		case 9: rank = "9"; break;
+		case 10: rank = "10"; break;
+		case 11: rank = "Jack"; break;
+		case 12: rank = "Queen"; break;
+		case 13: rank = "King";
+		}
+		
+		switch(suitNum) {
+		case 0: suit = "Clubs"; break;
+		case 1: suit = "Diamonds"; break;
+		case 2: suit = "Hearts"; break;
+		case 3: suit = "Spades";
+		}
+
+		System.out.println("The card you picked is " + rank + " of " + suit + "."); 
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class QQ2 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Please enter your nationality: ");
+		String nation = input.nextLine();
+		System.out.println(nation);
+		
+		System.out.println("Please enter your weight: ");
+		int weight = input.nextInt();
+		System.out.println("Your weight if you were lighter:" + (weight-20));
+		System.out.println("Your weight if you were lighter:" + (weight+20));
+		
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class QQ3 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Please enter the diameter of your pizza in inches: ");
+		double inches = input.nextDouble();
+		
+		double cost = 1.75 + (0.05 * Math.pow(inches, 2));
+		
+		System.out.println("Total Cost $ " + cost);
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class QQ4 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Please enter the amount of eggs you need: ");
+		int userInput = input.nextInt();
+		
+		int dozen = 12;
+		
+		int userData = userInput / dozen;
+		
+		if (userData <=3 && userData >=0) {
+			double sum = ((userInput / 12) *0.5);
+			double sum2 = ((0.5/12.0) * (userInput %12));
+			System.out.println("Your total cost: $ " +(sum +sum2));
+			
+		}
+		else if (userData >=4 && userData <=5) {
+			double sum = ((userInput / 12) *0.45);
+			double sum2 = ((0.45/12.0) * (userInput %12));
+			System.out.println("Your total cost: $ " +(sum+sum2));
+			
+		}
+		
+		else if (userData <=6 && userData >=10) {
+			double sum = ((userInput / 12) *0.35);
+			double sum2 = ((0.35/12.0) * (userInput %12));
+			System.out.println("Your total cost: $ " +(sum+sum2));
+		}
+		
+		else if (userInput / dozen >=11) {
+			double sum = ((userInput / 12) *0.25);
+			double sum2 = ((0.25/12.0) * (userInput %12));
+			System.out.println("Your total cost: $ " +(sum+sum2));
+		}
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class QQ5 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Please enter your height in metres: ");
+		double metres = input.nextDouble();
+		
+		System.out.println("Please enter your weight in kilograms: ");
+		double kilograms =  input.nextDouble();
+		
+		double BMI = kilograms / (Math.pow(metres, 2));
+		System.out.println("Your BMI: " + BMI);
+		
+		if (BMI <18) {
+			System.out.println("BMI Category: Underweight" );
+		}
+		
+		else if (BMI >= 18 && BMI <= 25) {
+			System.out.println("BMI Category: Normal weight" );
+		}
+		
+		else if (BMI >= 26 && BMI <= 30) {
+			System.out.println("BMI Category: Overweight" );
+		}
+		
+		else if (BMI >= 31) {
+			System.out.println("BMI Category: Obese" );
+		}
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class QQ6 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Please Enter your name: ");
+		String name = input.nextLine();
+		
+		System.out.println("Please Enter your employer: ");
+		String employer = input.nextLine();
+		
+		System.out.println("Please Enter your hours worked: ");
+		int hours = input.nextInt();
+		
+		System.out.println("Please Enter your hourly wage: ");
+		int wage = input.nextInt();
+		
+		int Gross = hours * wage;
+		double CPP = Gross *0.0495;
+		double EI = Gross * 0.0188;
+		double Taxes = Gross * 0.2005;
+		double pay = Gross - CPP -EI -Taxes;
+		
+		System.out.println("Name: " + name);
+		System.out.println("Company: " + employer);
+		System.out.println("Gross Earnings: " + Gross);
+		System.out.println("C.P.P: " + CPP);
+		System.out.println("E.I: " + EI);
+		System.out.println("Taxes: " + Taxes);
+		System.out.println("Total Pay: " + pay);
+		
+		
+		 
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class QQ7 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Hey, what's your name? ");
+		String name = input.nextLine();
+		
+		System.out.println("Ok, John, how old are you?");
+		int age = input.nextInt();
+		
+		if (age <=16) {
+			System.out.println("You can't drive. " + name);
+			System.out.println("You can't vote. "+ name);
+			System.out.println("You can't rent a car. "+ name);
+		}
+		
+		else if (age <=18) {
+			System.out.println("You can't vote. " + name);
+			System.out.println("You can't rent a car. "+ name);
+		}
+		
+		else if (age <=25) {
+			System.out.println("You can't rent a car."+ name);
+		}
+		else {
+			System.out.println("You can do anything that's legal");
+		}
+		
+
+	}
+
+}
