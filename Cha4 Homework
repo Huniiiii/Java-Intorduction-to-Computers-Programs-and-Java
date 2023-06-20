@@ -1,0 +1,517 @@
+package homework;
+import java.util.Scanner;
+public class Q1 {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		
+//		System.out.println("Enter your number: ");
+//		int user = input.nextInt();
+//		
+//		
+//		while (user!=0) {
+//			System.out.println(user + " is your number");
+//			System.out.println("Enter your number: ");
+//			user = input.nextInt();
+//			
+//		}
+		int user;
+		int positive = 0;
+		int negative = 0;
+		int count = 0;
+		int number = 0;
+		
+			
+		do {
+			System.out.print("Enter an integer, the input ends if it is 0: ");
+			user = input.nextInt();
+			
+				count ++;
+
+			
+			if (user > 0) {
+				positive ++;
+			}
+			else if (user < 0){
+				negative ++;
+			}
+			number += user;
+			} while(user !=0);
+		
+		if (count ==1) {
+			System.out.println("No numbers are entered except 0");
+		}
+		else {
+			double average = number /(double)(positive + negative);
+			
+			
+			System.out.println(count + " is count");
+			System.out.println(positive + " is postive");
+			System.out.println(negative + " is negative");
+			System.out.println(number + " is total");
+			System.out.println(average + " is average");			
+		}
+
+		
+
+	}
+
+}
+
+package homework;
+
+public class Q3 {
+
+	public static void main(String[] args) {
+		double poundToKg = 2.2;
+
+		System.out.println("Kilograms      Pounds");
+		int count = 0;
+		while (count <200 ) {
+			System.out.println(count , (count * poundToKg));  
+			count +=1;
+		}
+
+	}
+
+}
+
+package homework;
+
+public class Q3FoorLoop {
+
+	public static void main(String[] args) {
+		double poundToKg = 2.2;
+
+		System.out.println("Kilograms      Pounds");
+		for (int i = 0; i <199; i ++ ) {
+			System.out.println(i + "            " + (i * poundToKg));  
+			
+		}
+	}
+
+}
+
+package homework;
+
+public class Q4FoorLoop {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q9 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter number of students: ");
+		int studentNumber = input.nextInt();
+		int count = 0;
+		while (count < studentNumber) {
+			System.out.println("Enter score of " + count + ": " );
+			int score = input.nextInt();
+			count++;
+			
+		 int max = 0;
+		 int secondMax = 0;
+		 if (score > max) {
+			    secondMax = max;
+			    max = score;
+			   } 
+		 else if (score > secondMax) {
+			    secondMax = score;
+			   }
+			 
+		  System.out.println("The highest is " + max);
+		  System.out.println("The second highest is " + secondMax);
+			  }
+		
+	}
+
+}
+
+package homework;
+
+public class Q10 {
+
+	public static void main(String[] args) {
+		int count = 100;
+		int count_item = 0;
+		while (count <= 1000) {
+			if ((count % 5 ==0) && (count % 6 ==0)) {
+				System.out.print(count + " ");
+				count_item ++;
+				if (count_item % 10 ==0) {
+					System.out.println();
+				}
+			}
+			count ++;	
+		}
+
+	}
+
+}
+
+package homework;
+
+public class Q11 {
+
+	public static void main(String[] args) {
+		int count = 100;
+		int count_item = 0;
+		while (count <= 200) {
+			if (((count % 5 ==0) || (count % 6 ==0)) && !((count % 5 ==0) && (count % 6 ==0))){
+				System.out.print(count + " ");
+				count_item ++;
+				if (count_item % 10 ==0) {
+					System.out.println();
+				}
+			}
+			count ++;	
+		}
+
+	}
+
+}
+package homework;
+import java.util.Scanner;
+public class Q14 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter first postive intergers: ");
+		int number1 = input.nextInt();
+		System.out.println("Enter second postive intergers: ");
+		int number2 = input.nextInt();
+		
+		if (number2 < number1) {
+			int temp = number1;
+			number2 = number1;
+			number1 = temp;
+			  }
+		  
+//		System.out.println(number1 + " " + number2);
+		int gcd =1;
+		for (int i = 1; i <= number1; i++) {
+			if (number1 % i == 0 && number2 % i == 0) {
+				gcd = i;
+			}
+			    
+			
+		}
+		System.out.println("The GCD is:" + gcd);
+
+	}
+
+}
+
+package homework;
+
+public class Q18 {
+
+	public static void main(String[] args) {
+		System.out.println("Pattern A");
+		
+		for (int i=1; i<=6; i++) {
+			for (int j =1;j<=i; j++) {
+				System.out.print(j + " ");
+			}
+			System.out.println();
+		}
+
+	}
+
+}
+
+package homework;
+
+public class Q18B {
+
+	public static void main(String[] args) {
+		System.out.println("Pattern B");
+		
+		for (int i=6; i>=1; i--) {
+			for (int j =1;j<=i; j++) {
+				System.out.print(j + " ");
+			}
+			System.out.println();
+		}
+
+	}
+
+}
+package homework;
+
+import java.util.Scanner;
+public class Q20 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+//		System.out.print("Enter your number: ");
+//		int number = input.nextInt();
+		
+		int count_print = 0;
+		for (int j = 2; j <=1000; j++){
+			int count = 0;
+			int prime = 0;
+			
+			for(int i = 1; i <= j ;i++) {
+				if (j %i ==0) {
+					prime = i;
+					count ++;
+				}
+			}
+			if (count ==2) {
+				System.out.print(prime + " ");
+				count_print++;
+				if (count_print % 8 == 0) {
+					System.out.println();
+				}
+				
+			}
+		}
+	}
+}
+package homework;
+import java.util.Scanner;
+public class Q23 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter your numbers: ");
+		double userNumber = input.nextDouble();
+		
+		double sumNumberLeft = 0;
+		double sumNumberRight = 0;
+		for (double i = 1; i <=userNumber ; i++) {
+			sumNumberLeft = 1/ i +sumNumberLeft;
+		}
+		System.out.println("The left to rights's sum number is " + sumNumberLeft);
+		
+		for (double j = userNumber; j >= 1; j--) {
+			sumNumberRight = 1/j + sumNumberRight;
+		}
+		System.out.println("The right to rights's sum number is " + sumNumberRight);
+
+	}
+
+}
+package homework;
+import java.util.Scanner;
+public class Q24 {
+
+	public static void main(String[] args) {
+		double sum = 0;
+		
+		for(double i = 1; i <= 97; i+=2) {
+			sum += i/(i+2);
+		}
+		System.out.println("Sum is: " + sum);
+	}
+
+}
+
+package homework;
+
+public class Q25 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q26 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		double sum = 1;
+		double factorial = 1;
+		System.out.println("Enter your numbers: ");
+		double userNumber = input.nextDouble();
+		
+		for (double i = 1; i<= userNumber; i++) {
+			factorial = factorial *i;
+			sum += 1/factorial;
+			
+		}
+		System.out.println("The factorial is " + factorial);
+		
+		System.out.println("The sum is " + sum); 
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q31 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Enter the initial deposit amount: ");
+		double amount = input.nextInt();
+		
+		System.out.print("Enter annual percentage yield: ");
+		double percentage = input.nextDouble();
+		
+		System.out.print("Enter maturity period (number of months): ");
+		int months = input.nextInt();
+		
+		
+		System.out.println("Month CD Value");
+		for (int i = 1; i <= months; i++) {
+			amount += amount * percentage /1200;
+			System.out.println(i + "    " + amount);
+		}
+		
+
+	}
+
+}
+
+package homework;
+
+import java.util.Scanner;
+public class Q34 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int comp_num = (int)(Math.random() *3);
+		int winCom = 0;
+		int winUser = 0;
+		
+
+		
+	while((winUser < 2) && (winCom < 2)) {
+		System.out.print("scissor (0), rock (1), paper (2): ");
+		int user_num = input.nextInt();
+		
+		String comp = null;
+		String user = null;
+		
+		switch (comp_num) {
+		case 0 : comp = "scissor"; break;
+		case 1 : comp = "rock"; break;
+		case 2 : comp = "paper"; break;
+		}
+		
+		switch (user_num) {
+		case 0 : user = "scissor"; break;
+		case 1 : user = "rock"; break;
+		case 2 : user = "paper"; break;
+		}
+
+		 System.out.print("The computer is " + comp + ". You are " + user);
+		
+		 if (comp_num == user_num) {
+			 System.out.println(", it is a draw");
+		 }
+		 else if ((user_num == 0 && comp_num == 2) ||(user_num == 1 && comp_num == 0) || (user_num == 2 && comp_num == 1)) {
+			 System.out.println(", you won");
+			 winUser++;
+		 }
+		 
+		 else
+			 System.out.println(", you lose");
+		 winCom++;
+		 	
+		 System.out.println("Users: " +winUser + " Comp: " + winCom);
+	}
+	
+	}
+}
+
+package homework;
+
+public class Q39 {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+
+package homework;
+
+public class Q40 {
+
+	public static void main(String[] args) {
+		int head = 0;
+		int tail = 0;
+		for (int i=0;i<1000000;i++) {
+			double flipping = Math.random() ;
+			if (flipping <0.5) {
+				head++;
+			}
+			else {
+				tail++;
+			}
+			
+		}
+		System.out.println("Head: " + head + " Tail: " + tail);
+
+	}
+
+}
+
+package homework;
+import java.util.Scanner;
+public class Q41 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter numbers: ");
+		int num = input.nextInt();
+		int max = num;
+		int count = 0;
+		
+		while (num >0) {
+			num = input.nextInt();
+			if (num > max) {
+				max = num;
+				count =1;
+			}
+			else if (num ==max) {
+				count ++;
+			}
+
+	}
+		System.out.println("The largest number is " + max);
+		System.out.println("The occurrence count of the largest number is " + count);
+}
+}
+
+package homework;
+
+public class Q45 {
+
+	public static void main(String[] args) {
+		int count = 0;
+		
+		for(int i = 1; i <=7; i++) {
+			for(int j = i+1; j<=7; j++) {
+				System.out.println(i + " " + j);
+				count++;
+			}
+		}
+		
+		System.out.println("The total number of all combinations is " + count);
+
+	}
+
+}
