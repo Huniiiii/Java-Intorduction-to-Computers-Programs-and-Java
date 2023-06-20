@@ -1,0 +1,129 @@
+package exercise;
+
+public class WhileLoop {
+
+	public static void main(String[] args) {
+
+		int count = 0;
+		while (count <5) {
+			System.out.println("Hello");
+			count ++1;
+		}
+
+	}
+
+}
+
+package exercise;
+
+public class ForLoop {
+
+	public static void main(String[] args) {
+		for (int i =0; i <10;) {
+			System.out.println("Hello"); // (initial; loop-condition; step)
+		}
+
+	}
+
+}
+
+package exercise;
+
+import java.util.Scanner;
+
+public class Huni {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int comp_num = (int)(Math.random() *3);
+		
+		System.out.print("scissor (0), rock (1), paper (2): ");
+		int user_num = input.nextInt();
+		
+		String comp = null;
+		String user = null;
+		
+		
+		
+		switch (comp_num) {
+		case 0 : comp = "scissor"; break;
+		case 1 : comp = "rock"; break;
+		case 2 : comp = "paper"; break;
+		}
+		
+		switch (user_num) {
+		case 0 : user = "scissor"; break;
+		case 1 : user = "rock"; break;
+		case 2 : user = "paper"; break;
+		}
+
+		 System.out.print("The computer is " + comp + ". You are " + user);
+		
+		 if (comp_num == user_num) {
+			 System.out.println(", it is a draw");
+		 }
+		 else if ((user_num == 0 && comp_num == 2) ||(user_num == 1 && comp_num == 0) || (user_num == 2 && comp_num == 1)) {
+			 System.out.println(", you won");
+		 }
+		 
+		 else
+			 System.out.println(", you lose");
+		 	
+
+	}
+
+}
+
+
+
+package exercise;
+
+import java.util.Scanner;
+
+public class Huni1 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int comp_num = (int)(Math.random() *3);
+		int winCom = 0;
+		int winUser = 0;
+		
+		System.out.print("scissor (0), rock (1), paper (2): ");
+		int user_num = input.nextInt();
+		
+		String comp = null;
+		String user = null;
+		
+		
+	while((winCom<2)||(winUser<2)) {
+		switch (comp_num) {
+		case 0 : comp = "scissor"; break;
+		case 1 : comp = "rock"; break;
+		case 2 : comp = "paper"; break;
+		}
+		
+		switch (user_num) {
+		case 0 : user = "scissor"; break;
+		case 1 : user = "rock"; break;
+		case 2 : user = "paper"; break;
+		}
+
+		 System.out.print("The computer is " + comp + ". You are " + user);
+		
+		 if (comp_num == user_num) {
+			 System.out.println(", it is a draw");
+		 }
+		 else if ((user_num == 0 && comp_num == 2) ||(user_num == 1 && comp_num == 0) || (user_num == 2 && comp_num == 1)) {
+			 System.out.println(", you won");
+			 winUser++;
+		 }
+		 
+		 else
+			 System.out.println(", you lose");
+		 winCom++;
+		 	
+
+	}
+	}
+}
+
